@@ -1,15 +1,10 @@
 import * as React from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "../pages/HomeScreen";
-import PlaceDetailScreen from "../pages/PlaceDetailScreen";
-import LoginScreen from "../pages/LoginScreen";
-import RegisterScreen from "../pages/RegisterScreen";
-import { Text } from "react-native";
+import {Text,StyleSheet} from "react-native";
+import { Stack, ActivityIndicator } from "@react-native-material/core";
 import { auth } from "../firebase";
 import {logOut, setUser} from "../redux-toolkit/userReducer"
 import { useDispatch } from 'react-redux';
 
-const Stack = createNativeStackNavigator();
 
 //RealM
 
@@ -20,7 +15,7 @@ function NavigationController(props) {
     auth.onAuthStateChanged((authUser)=>{
       if(authUser){
         dispatch(setUser(authUser));
-        props.navigation.replace("Home");
+        props.navigation.replace("Profile")
       }else{
         dispatch(logOut());
         props.navigation.replace("Login");
@@ -32,10 +27,19 @@ function NavigationController(props) {
 
 
   return (
-        <>
-            <Text>HepGez</Text>
-        </>
+    <Stack fill center spacing={4}>
+    <ActivityIndicator size="large" />
+    <Text style={styles.baseText}>Hep Gez</Text>
+  </Stack>
   );
 }
+
+const styles = StyleSheet.create({
+  baseText: {
+    fontFamily: "Cochin",
+    fontSize: 20,
+    fontWeight: "bold"
+  }
+});
 
 export default NavigationController;
