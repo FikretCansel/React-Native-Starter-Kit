@@ -25,3 +25,4 @@ const auth = firebase.auth();
 
 export { db, auth };
 
+const firebaseConfig = yourconfig
