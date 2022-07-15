@@ -10,16 +10,7 @@ import "firebase/auth";
 //import {...} from "firebase/storage";
 
 // Initialize Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyDx5ClC2Ygtm1xNSh_B_63bfXV2xpgkf34",
-  authDomain: "fikretoole.firebaseapp.com",
-  databaseURL: "https://fikretoole-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "fikretoole",
-  storageBucket: "fikretoole.appspot.com",
-  messagingSenderId: "133798653069",
-  appId: "1:133798653069:web:c9a75c8175c28f2cb1c6c4",
-  measurementId: "G-QNBLZC4KDD"
-};
+const firebaseConfig = Your
 
 let app;
 
