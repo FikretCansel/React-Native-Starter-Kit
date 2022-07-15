@@ -70,8 +70,8 @@ const HomeScreen = () => {
       <Button title="Çıkış Yap" onPress={() => handleLogOut()}></Button>
 
         {places.map((place) => (
-          <TouchableOpacity style={styles.container} onPress={() => navigation.navigate("Details")} key={place.id}>
-            <HomeCard name={place.name} imageUrl={place.imageUrl}/>
+          <TouchableOpacity style={styles.container} onPress={() => navigation.navigate("Details",place={place})} key={place.id}>
+            <HomeCard place={place}/>
             </TouchableOpacity>
         ))}
 

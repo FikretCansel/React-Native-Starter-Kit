@@ -1,18 +1,18 @@
 import * as React from "react";
 import { Text, View, StyleSheet, Image } from "react-native";
 
-export default function HomeCard({name,imageUrl,city}) {
+export default function HomeCard({place}) {
  
 
   return (
     <View style={styles.container}>
       <Text style={styles.paragraph}>
-        {name}
+        {place.name}
       </Text>
       <Image
         style={styles.logo}
         source={{
-          uri:imageUrl!==undefined?imageUrl:"https://www.klasiksanatlar.com/img/sayfalar/b/1_1598452306_resim.png",
+          uri:place.imageUrl!==undefined?place.imageUrl:"https://www.klasiksanatlar.com/img/sayfalar/b/1_1598452306_resim.png",
         }}
       />
     </View>

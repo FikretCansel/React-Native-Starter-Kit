@@ -8,14 +8,15 @@ import HomeCard from '../components/HomeCard.js';
 // or any pure javascript modules available in npm
 import { Card } from 'react-native-paper';
 
-const PlaceDetailScreen = () => {
+const PlaceDetailScreen = (props) => {
+  console.log()
   return (
     <View style={styles.container}>
       <Text style={styles.paragraph}>
         Change code in the editor and watch it change on your phone! Save to get a shareable url.
       </Text>
       <Card>
-        <HomeCard />
+        <HomeCard place={props.route.params.place}/>
       </Card>
     </View>
   )

@@ -9,6 +9,7 @@ import { store } from "./redux-toolkit/store.js";
 import LoginScreen from "./pages/LoginScreen";
 import RegisterScreen from "./pages/RegisterScreen";
 import NavigationController from "./components/NavigationController";
+import ProfileScreen from "./pages/ProfileScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +30,11 @@ function App() {
             />
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Details" component={PlaceDetailScreen} />
+            <Stack.Screen
+              name="Profile"
+              component={ProfileScreen}
+              options={{ headerShown: false }}
+            />
           </Stack.Navigator>
         </SafeAreaProvider>
       </NavigationContainer>

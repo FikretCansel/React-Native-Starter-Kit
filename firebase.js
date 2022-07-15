@@ -10,7 +10,7 @@ import "firebase/auth";
 //import {...} from "firebase/storage";
 
 // Initialize Firebase
-const firebaseConfig = YourConfig;
+
 
 let app;
 
